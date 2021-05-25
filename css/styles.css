@@ -117,7 +117,7 @@ select {
     'perfil description description';
 }
 
-.header {
+.header-section {
   grid-area: header;
 }
 
