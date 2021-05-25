@@ -1,0 +1,512 @@
+:root {
+  --color-primay: #9935d3;
+  --color-secondary: #e5e5e5;
+  --color-box: #1e1e26;
+  --color-p: #969191;
+  --color-gray: #292a34;
+  --color-background: #01090d;
+  /*011017 */
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+body,
+input,
+select {
+  font-family: 'Archivo', sans-serif;
+}
+
+h2 {
+  font-size: 1.6em;
+  color: var(--color-primay);
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.4em;
+  color: var(--color-secondary);
+}
+
+p {
+  color: var(--color-p);
+  font-size: 1.2em;
+}
+
+img {
+  max-width: 100%;
+
+  display: block;
+}
+
+:-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray);
+  border-radius: 30px;
+}
+
+body,
+input,
+select {
+  font-family: 'Nunito', sans-serif;
+}
+
+.structure {
+  display: grid;
+  grid-template-areas: 'menu content search';
+  justify-content: space-between;
+}
+
+.content {
+  padding: 10px 1.5% 0 1.5%;
+}
+.menu {
+  padding: 10% 10% 0 10px;
+}
+.search {
+  padding: 10% 5% 0 5%;
+}
+
+/* Aside menu */
+.menu {
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.icon-search {
+  display: none;
+}
+
+.icons {
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.icons img {
+  min-width: 35px;
+}
+
+.logout {
+  min-width: 35px;
+  position: fixed;
+  bottom: 20px;
+  left: 1%;
+  z-index: 99999;
+}
+
+/* Content */
+.content {
+  grid-area: content;
+}
+
+.structure-content {
+  display: grid;
+  gap: 30px;
+  grid-template-areas:
+    'header header header'
+    'perfil description description';
+}
+
+.header {
+  grid-area: header;
+}
+
+.header p:after {
+  content: '';
+  display: block;
+  height: 0.2px;
+  background: var(--color-gray);
+  margin: 14px auto 10px auto;
+}
+
+/* Perfil*/
+.perfil {
+  grid-area: perfil;
+  min-width: 270px;
+}
+
+.student-profile {
+  background: var(--color-box);
+  border-radius: 4px;
+  position: relative;
+}
+
+.student-profile h3 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.student-profile h3:after {
+  content: '';
+  display: block;
+  height: 0.1px;
+  background: var(--color-background);
+  margin: 25px auto 10px auto;
+}
+
+.pencil {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.student {
+  margin: 0 auto;
+  padding: 40px 0 20px 0%;
+}
+
+.data {
+  text-align: left;
+  padding-left: 25px;
+  padding-bottom: 30px;
+}
+
+.data li {
+  font-size: 1em;
+  color: var(--color-secondary);
+  line-height: 1.5em;
+}
+
+.data li span {
+  color: var(--color-primay);
+}
+
+.description {
+  grid-area: description;
+}
+
+/* Sobre */
+.about {
+  background: var(--color-box);
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.about h2 {
+  padding: 20px;
+}
+
+.about p {
+  padding: 0 35px 50px 35px;
+}
+
+/* tecnologia */
+
+.technology h2 {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.technology-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+
+.technology-card {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: var(--color-box);
+  border-radius: 4px;
+  height: 100px;
+  max-width: 100%;
+}
+
+.technology-list p {
+  text-align: center;
+  font-size: 1.4em;
+  color: var(--color-secondary);
+}
+.technology-list li img {
+  display: none;
+  margin: 0 auto;
+  align-items: center;
+  width: 55px;
+}
+
+/*Cursos*/
+.course {
+  margin-top: 70px;
+}
+
+.course h2 {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.course-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.course-card {
+  background: var(--color-box);
+  border-radius: 4px;
+  border: solid 1px var(--color-primay);
+  padding: 35px 20px 20px 30px;
+}
+
+.course-card h3 {
+  padding-bottom: 20px;
+}
+
+/* Experiencias */
+.experiences {
+  padding-top: 70px;
+}
+
+.experiences h2 {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.experiences-card {
+  background: var(--color-box);
+  padding: 20px 20px 20px 30px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.experiences-card h2 {
+  padding-left: 0px;
+  margin-bottom: 5px;
+}
+
+.experiences-card h3 {
+  font-size: 1.25em;
+  line-height: 1.6em;
+}
+
+.experiences-card p {
+  font-size: 1em;
+}
+
+.pencil-2 {
+  position: absolute;
+  right: 15px;
+  top: 60px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Search*/
+.search {
+  grid-area: search;
+  display: flex;
+  flex-direction: column;
+}
+
+.search input {
+  display: block;
+  background: var(--color-gray);
+  outline: none;
+  border-radius: 50px;
+  padding: 12px 15px 12px 15px;
+  border: none;
+  text-align: center;
+  color: var(--color-p);
+  margin-bottom: 50px;
+}
+
+.shortcut:after {
+  content: '';
+  display: block;
+  height: 0.2px;
+  background: var(--color-gray);
+  margin: 14px auto 10px auto;
+}
+
+.shortcut h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.shortcut p {
+  color: var(--color-primay);
+  font-size: 0.8em;
+  line-height: 2em;
+}
+
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 1.3em;
+    color: var(--color-primay);
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    color: var(--color-secondary);
+  }
+
+  p {
+    color: var(--color-p);
+    font-size: 1em;
+  }
+  .perfil {
+    grid-area: perfil;
+    min-width: 220px;
+  }
+
+  .course-list {
+    flex-wrap: wrap;
+  }
+
+  .technology-list {
+    overflow: auto;
+  }
+  .technology-card {
+    min-width: 100%;
+  }
+  .technology-list p {
+    padding: 0 20px;
+    text-align: center;
+    font-size: 1.4em;
+    color: var(--color-secondary);
+  }
+}
+
+@media (max-width: 1000px) {
+  .content {
+    padding: 0;
+  }
+  .perfil {
+    padding: 0 5%;
+  }
+  .description {
+    padding: 0 5%;
+  }
+  .menu {
+    padding: 0;
+  }
+  .search {
+    padding: 0 5%;
+  }
+  .structure {
+    display: grid;
+    grid-template-areas:
+      'content'
+      'search'
+      'menu';
+    justify-content: space-between;
+  }
+
+  .structure-content {
+    display: grid;
+    gap: 30px;
+    grid-template-areas:
+      'header'
+      'perfil'
+      'description';
+  }
+
+  .header-section {
+    background: var(--color-primay);
+    padding: 10px 5%;
+  }
+
+  .header-section p {
+    color: var(--color-secondary);
+  }
+
+  .header p:after {
+    display: none;
+  }
+
+  .about p {
+    padding: 0 30px 30px 25px;
+  }
+
+  .technology-list p {
+    display: none;
+    text-align: center;
+    font-size: 1.4em;
+    color: var(--color-secondary);
+  }
+  .technology-list li img {
+    display: block;
+
+    height: 50px;
+    margin: 0 auto;
+    align-items: center;
+    width: 55px;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .experiences-card h3 {
+    font-size: 1em;
+    line-height: 1.6em;
+  }
+
+  .experiences-card p {
+    font-size: 0.9em;
+  }
+
+  .menu {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background: var(--color-background);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    bottom: 0;
+    justify-content: center;
+    border-top: 1px solid var(--color-gray);
+  }
+
+  .icon-search {
+    display: block;
+    max-width: 30px;
+  }
+  .logo {
+    display: none;
+  }
+
+  .icons {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+    gap: 40px;
+  }
+  .logout {
+    position: static;
+  }
+
+  .icons img {
+    height: 35px;
+  }
+  .experiences {
+    margin-bottom: 110px;
+  }
+}
+
+@media (max-width: 600px) {
+}
